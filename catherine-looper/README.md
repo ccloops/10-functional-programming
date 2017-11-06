@@ -37,11 +37,7 @@ We approached this design with a mobile first mindset. Then we used media querie
 Change Log
 ====
 
-11/3/17 9:00AM We started off with Catherine driving and Kat navigating, we set up the file tree, and completed the first few TODOs.
-
-11/3/17 10:00AM We switched to Kat as driver and Catherine as navigator. We finished the TODOs and tested the functionality. We had errors so we fixed the join function.
-
-11/3/17 11:00AM We switched to Catherine as driver and Kat as navigator and completed the README.
+11/3/17 9:00AM 
 
 
 Credits and Collaborations
