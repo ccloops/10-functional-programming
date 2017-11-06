@@ -2,7 +2,7 @@
 
 Author: Catherine Looper
 
-Version: 1.10.0
+Version: 2.0.0
 
 Overview
 
@@ -37,7 +37,7 @@ We approached this design with a mobile first mindset. Then we used media querie
 Change Log
 ====
 
-11/3/17 9:00AM 
+11/5/17 12:00PM Added an admin.html page including a Handlebars template. The new admin page displays blog stats with a total articles count and total words count. The admin.html page also includes author stats that includes author name and total words written. The app now relies on functional programming features such as .map, .reduce and .filter.
 
 
 Credits and Collaborations
