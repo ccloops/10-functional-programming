@@ -53,20 +53,28 @@ var app = app || {};
   Article.numWordsAll = () => {
     return Article.all.map(articleObject => articleObject.body.split(' ').length).reduce((a,b) => a + b);
 
-    // return Article.all.map(article => article.body.split(' ').reduce((acc => acc + 1), 0)).reduce((acc, num) => acc += num);
   };
 
-  // TODO: Chain together a .map() and a .reduce() call to produce an array of unique author names. You will probably need to use the optional accumulator argument in your reduce call.
+  // DONE: Chain together a .map() and a .reduce() call to produce an array of unique author names. You will probably need to use the optional accumulator argument in your reduce call.
   Article.allAuthors = () => {
-    return Article.all.map().reduce();
+    return Article.all.map(articleObject => articleObject.author).reduce((acc, author) => {
+      if(!acc.includes(author)) {
+        acc.push(author);
+      }
+      return acc;
+    }, []);
   };
 
   Article.numWordsByAuthor = () => {
     return Article.allAuthors().map(author => {
-    // TODO: Transform each author string into an object with properties for the author's name, as well as the total number of words across all articles written by the specified author.
+    // DONE: Transform each author string into an object with properties for the author's name, as well as the total number of words across all articles written by the specified author.
     // HINT: This .map() should be set up to return an object literal with two properties.
     // The first property should be pretty straightforward, but you will need to chain some combination of .filter(), .map(), and .reduce() to get the value for the second property.
-
+      let eachAuthor = Article.all.filter(articleObject => articleObject.author === author).map(articleObject => articleObject.body.split(' ').length).reduce((a,b) => a + b);
+      return {
+        authorName: author,
+        numberWords: eachAuthor
+      }
     })
   };
 
